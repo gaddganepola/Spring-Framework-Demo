@@ -11,11 +11,16 @@ public class App {
 
 //        Use application context to create object
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        obj = (Alien) context.getBean("alien");
+//        obj = (Alien) context.getBean("alien");
+//        obj = context.getBean("alien", Alien.class);
+        obj = context.getBean(Alien.class);
+
 //        obj.setAge(10);
         System.out.println("Age" + obj.getAge());
         System.out.println("Salary" + obj.getSalary());
         obj.coding();
+
+//        Computer com = context.getBean(Computer.class);
 
 //        Alien obj1 = (Alien) context.getBean("alien");
 //        System.out.println(obj1.getAge());
