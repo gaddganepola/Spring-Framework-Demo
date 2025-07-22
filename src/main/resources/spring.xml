@@ -79,6 +79,10 @@
     <bean id="com" class="com.springframework.Laptop" scope="prototype">
     </bean>
 
+<!--    Primary bean-->
+    <bean id="com2" class="com.springframework.Laptop" scope="prototype" primary="true">
+    </bean>
+
 <!--    <bean id="com1" class="com.springframework.Desktop" scope="prototype">-->
 <!--    </bean>-->
 
