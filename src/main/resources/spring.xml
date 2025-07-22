@@ -6,6 +6,7 @@
 
     <!-- bean definitions here -->
     <bean id="alien" class="com.springframework.Alien" scope="singleton">
+        <property name="age" value="21"/>
     </bean>
 
 <!--    <bean id="alien1" class="com.springframework.Alien">-->
