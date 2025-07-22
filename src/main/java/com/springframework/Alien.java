@@ -6,7 +6,7 @@ public class Alien {
 
     private int age;
     private int salary;
-    private Laptop lap;
+    private Computer com;
 
     public Alien() {
         System.out.println("Alien Created..");
@@ -17,9 +17,9 @@ public class Alien {
         System.out.println("age constructor called...");
     }
 
-    public Alien(int age, Laptop lap) {
+    public Alien(int age, Computer com) {
         this.age = age;
-        this.lap = lap;
+        this.com = com;
         System.out.println("age and lap constructor called...");
     }
 
@@ -31,25 +31,25 @@ public class Alien {
         this.salary = salary;
     }
 
-    @ConstructorProperties({"age", "salary", "lap"})
-    public Alien(int age, int salary, Laptop lap) {
+    @ConstructorProperties({"age", "salary", "com"})
+    public Alien(int age, int salary, Computer com) {
         this.age = age;
         this.salary = salary;
-        this.lap = lap;
+        this.com = com;
         System.out.println("All constructor called...");
     }
 
     public void coding() {
         System.out.println("Coding.....");
-        lap.compile();
+        com.compile();
     }
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getCom() {
+        return com;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setCom(Computer com) {
+        this.com = com;
     }
 
     public int getAge() {

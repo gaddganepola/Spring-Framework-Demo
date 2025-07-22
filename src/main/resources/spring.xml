@@ -41,19 +41,49 @@
 <!--        <constructor-arg type="int" value="35"/>-->
 <!--    </bean>-->
 
-    <bean id="alien" class="com.springframework.Alien" scope="singleton">
-        <constructor-arg name="salary" value="35000"/>
-        <constructor-arg name="lap" ref="laptop"/>
-        <constructor-arg name="age" value="35"/>
+<!--    <bean id="alien" class="com.springframework.Alien" scope="singleton">-->
+<!--        <constructor-arg name="salary" value="35000"/>-->
+<!--        <constructor-arg name="com" ref="laptop"/>-->
+<!--        <constructor-arg name="age" value="35"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="alien" class="com.springframework.Alien" scope="singleton">-->
+<!--        <property name="age" value="35"/>-->
+<!--        <property name="salary" value="35000"/>-->
+<!--        <property name="com" ref="com"/>-->
+<!--    </bean>-->
+
+<!--    Autowire using name-->
+<!--    <bean id="alien" class="com.springframework.Alien" scope="singleton" autowire="byName">-->
+<!--        <property name="age" value="35"/>-->
+<!--        <property name="salary" value="35000"/>-->
+<!--    </bean>-->
+
+    <!--    Autowire with explicit property-->
+<!--    <bean id="alien" class="com.springframework.Alien" scope="singleton" autowire="byName">-->
+<!--        <property name="age" value="35"/>-->
+<!--        <property name="salary" value="35000"/>-->
+<!--        <property name="com" ref="com1"/>-->
+<!--    </bean>-->
+
+<!--    Autowire using type-->
+    <bean id="alien" class="com.springframework.Alien" scope="singleton" autowire="byType">
+        <property name="age" value="35"/>
+        <property name="salary" value="35000"/>
     </bean>
 
 <!--    Create multiple beans-->
 <!--    <bean id="alien1" class="com.springframework.Alien">-->
 <!--    </bean>-->
 
-
-    <bean id="laptop" class="com.springframework.Laptop" scope="prototype">
+    <bean id="com" class="com.springframework.Laptop" scope="prototype">
     </bean>
+
+<!--    <bean id="com1" class="com.springframework.Desktop" scope="prototype">-->
+<!--    </bean>-->
+
+<!--    <bean id="laptop" class="com.springframework.Laptop" scope="prototype">-->
+<!--    </bean>-->
 
 </beans>
 
