@@ -7,12 +7,13 @@
     <!-- bean definitions here -->
     <bean id="alien" class="com.springframework.Alien" scope="singleton">
         <property name="age" value="21"/>
+        <property name="lap" ref="laptop"/>
     </bean>
 
 <!--    <bean id="alien1" class="com.springframework.Alien">-->
 <!--    </bean>-->
 
-    <bean class="com.springframework.Laptop" scope="prototype">
+    <bean id="laptop" class="com.springframework.Laptop" scope="prototype">
     </bean>
 
 </beans>
