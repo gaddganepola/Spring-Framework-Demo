@@ -67,10 +67,10 @@
 <!--    </bean>-->
 
 <!--    Autowire using type-->
-    <bean id="alien" class="com.springframework.Alien" scope="singleton" autowire="byType">
-        <property name="age" value="35"/>
-        <property name="salary" value="35000"/>
-    </bean>
+<!--    <bean id="alien" class="com.springframework.Alien" scope="singleton" autowire="byType">-->
+<!--        <property name="age" value="35"/>-->
+<!--        <property name="salary" value="35000"/>-->
+<!--    </bean>-->
 
 <!--    Create multiple beans-->
 <!--    <bean id="alien1" class="com.springframework.Alien">-->
@@ -85,6 +85,16 @@
 
     <!--    Lazy bean-->
     <bean id="com3" class="com.springframework.Laptop" scope="prototype" lazy-init="true">
+    </bean>
+
+<!--    Inner Bean-->
+    <bean id="alien" class="com.springframework.Alien" scope="singleton" autowire="byType">
+        <property name="age" value="35"/>
+        <property name="salary" value="35000"/>
+        <property name="com">
+            <bean id="com4" class="com.springframework.Laptop">
+            </bean>
+        </property>
     </bean>
 
 <!--    <bean id="com1" class="com.springframework.Desktop" scope="prototype">-->
