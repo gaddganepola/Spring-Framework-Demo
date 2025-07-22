@@ -83,6 +83,10 @@
     <bean id="com2" class="com.springframework.Laptop" scope="prototype" primary="true">
     </bean>
 
+    <!--    Lazy bean-->
+    <bean id="com3" class="com.springframework.Laptop" scope="prototype" lazy-init="true">
+    </bean>
+
 <!--    <bean id="com1" class="com.springframework.Desktop" scope="prototype">-->
 <!--    </bean>-->
 
