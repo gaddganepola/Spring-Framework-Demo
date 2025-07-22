@@ -5,13 +5,13 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="alien" class="com.springframework.Alien">
+    <bean id="alien" class="com.springframework.Alien" scope="singleton">
     </bean>
 
 <!--    <bean id="alien1" class="com.springframework.Alien">-->
 <!--    </bean>-->
 
-    <bean class="com.springframework.Laptop">
+    <bean class="com.springframework.Laptop" scope="prototype">
     </bean>
 
 </beans>
