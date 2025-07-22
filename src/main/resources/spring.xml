@@ -5,13 +5,52 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
+
+<!--    Create a bean-->
+<!--    <bean id="alien" class="com.springframework.Alien" scope="singleton">-->
+<!--    </bean>-->
+
+<!--    Initialize the bean-->
+<!--    <bean id="alien" class="com.springframework.Alien" scope="singleton">-->
+<!--        <property name="age" value="21"/>-->
+<!--        <property name="lap" ref="laptop"/>-->
+<!--    </bean>-->
+
+<!--    Initialize single value using Constructor-->
+<!--    <bean id="alien" class="com.springframework.Alien" scope="singleton">-->
+<!--        <constructor-arg value="35"/>-->
+<!--        <property name="lap" ref="laptop"/>-->
+<!--    </bean>-->
+
+    <!--    Initialize multiple values using Constructor-->
+<!--    <bean id="alien" class="com.springframework.Alien" scope="singleton">-->
+<!--        <constructor-arg value="35"/>-->
+<!--        <constructor-arg ref="laptop"/>-->
+<!--    </bean>-->
+
+    <!--    IMention the type of the variable-->
+<!--    <bean id="alien" class="com.springframework.Alien" scope="singleton">-->
+<!--        <constructor-arg type="com.springframework.Laptop" ref="laptop"/>-->
+<!--        <constructor-arg type="int" value="35"/>-->
+<!--    </bean>-->
+
+<!--    Same type of variable-->
+<!--    <bean id="alien" class="com.springframework.Alien" scope="singleton">-->
+<!--        <constructor-arg type="int" value="35000"/>-->
+<!--        <constructor-arg type="com.springframework.Laptop" ref="laptop"/>-->
+<!--        <constructor-arg type="int" value="35"/>-->
+<!--    </bean>-->
+
     <bean id="alien" class="com.springframework.Alien" scope="singleton">
-        <property name="age" value="21"/>
-        <property name="lap" ref="laptop"/>
+        <constructor-arg name="salary" value="35000"/>
+        <constructor-arg name="lap" ref="laptop"/>
+        <constructor-arg name="age" value="35"/>
     </bean>
 
+<!--    Create multiple beans-->
 <!--    <bean id="alien1" class="com.springframework.Alien">-->
 <!--    </bean>-->
+
 
     <bean id="laptop" class="com.springframework.Laptop" scope="prototype">
     </bean>
