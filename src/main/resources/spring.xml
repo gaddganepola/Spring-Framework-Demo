@@ -6,7 +6,12 @@
 
     <!-- bean definitions here -->
     <bean id="alien" class="com.springframework.Alien">
+    </bean>
 
+<!--    <bean id="alien1" class="com.springframework.Alien">-->
+<!--    </bean>-->
+
+    <bean class="com.springframework.Laptop">
     </bean>
 
 </beans>
